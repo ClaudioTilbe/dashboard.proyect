@@ -1,0 +1,31 @@
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\appsettings.Development.json
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\appsettings.json
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.staticwebassets.runtime.json
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.exe
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.deps.json
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.runtimeconfig.json
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.dll
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.pdb
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.AssemblyInfoInputs.cache
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.AssemblyInfo.cs
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.csproj.CoreCompileInputs.cache
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.MvcApplicationPartsAssemblyInfo.cache
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.RazorAssemblyInfo.cache
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.RazorAssemblyInfo.cs
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets.build.json
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets.development.json
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets\msbuild.Dashboard Proyect.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets\msbuild.build.Dashboard Proyect.props
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Dashboard Proyect.props
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Dashboard Proyect.props
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets.pack.json
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\scopedcss\bundle\Dashboard Proyect.styles.css
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\scopedcss\projectbundle\Dashboard Proyect.bundle.scp.css
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.dll
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\refint\Dashboard Proyect.dll
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.pdb
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.genruntimeconfig.cache
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\ref\Dashboard Proyect.dll
+E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\libman.json

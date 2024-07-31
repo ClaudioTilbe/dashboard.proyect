@@ -1,0 +1,67 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+/* Estilos agregados ====================================================================================== */
+.bg-agregado-Oscuro {
+    background-color: #222021;
+    color: white; /* Para asegurarte de que el texto sea legible */
+}
+
+.bg-agregado-Oscuro2 {
+    background-color: #272c32;
+    color: white; /* Para asegurarte de que el texto sea legible */
+}
+
+.bg-agregado-h-and-f {
+    background-color: #0e0e0e;
+    color: white; /* Para asegurarte de que el texto sea legible */
+}
+
+.border-agregado-Oscuro {
+    border: 3px solid #222021; /* Color de borde personalizado */
+}
+
+
+
+/* Lo agrego para solucionar la falta de contenido que hacia que suba el footer*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    padding: 20px; /* Ajusta el padding según tus necesidades */
+    margin-top: auto;
+    width: 100%;
+}
+
+

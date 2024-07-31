@@ -1,0 +1,164 @@
+﻿
+
+@{
+    ViewBag.Title = "Ventas en tiempo real";
+
+}
+
+
+
+<div class="row bg-agregado-Oscuro2">
+
+    <div class="col-6 border-agregado-Oscuro">
+
+        <div class="p-1">
+            @* <p class="fw-bold pt-2 ps-2">Ventas por categoria</p> *@
+
+            <div class="p-2">
+                <canvas id="myChart1"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6 border-agregado-Oscuro">
+
+        <div class="p-3">
+
+            <h4 class="mb-3">Ingresa una venta</h4>
+
+            <input type="button" id="agregarAlimento" value="Agregar alimento" class="btn btn-success d-block mb-2" onclick="accionarEvento(this.id)" />
+            <input type="button" id="agregarRopa" value="Agregar ropa" class="btn btn-success d-block mb-2" onclick="accionarEvento(this.id)" />
+            <input type="button" id="agregarJuguetes" value="Agregar juguete" class="btn btn-success d-block mb-2" onclick="accionarEvento(this.id)" />
+            <input type="button" id="agregarElectronica" value="Agregar electronica" class="btn btn-success d-block mb-2" onclick="accionarEvento(this.id)" />
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+    var myChartGeneral;
+
+    // Ventas por categoria ======================================================================
+
+    function generarGrafico(ventasXCategoria) {
+        var ctxGeneral = document.getElementById('myChart1').getContext('2d');
+
+        myChartGeneral = new Chart(ctxGeneral, {
+            type: 'doughnut',
+            data: {
+                labels: ventasXCategoria.map(x => x.categoria),
+                datasets: [{
+                    data: ventasXCategoria.map(x => x.totalVentas),
+
+                    backgroundColor: [
+                        'rgba(255, 159, 64, 1)', //Naranja
+                        'rgba(75, 192, 192, 1)', //Verde agua
+                        'rgba(54, 162, 235, 1)', //Azul
+                        'rgba(255, 99, 132, 1)' //Rojo
+
+                    ],
+                    borderColor: 'rgba(255, 255, 255, 1)',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                // animation: {
+                //     duration: 0 // Desactiva la animación
+                // },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Ventas por categoria'
+                    }
+                }
+            }
+        });
+    }
+
+
+
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/DashboardHub")
+        .configureLogging(signalR.LogLevel.Information)
+        .build();
+
+
+    connection.start()
+        .then(inicioRT)
+        .catch(function (err) {
+            return console.error(err.toString());
+        });
+
+
+    function inicioRT() {
+
+        connection.invoke("inicioRT").then(function () {
+        }).catch(function (error) {
+            console.error("(inicioRT) Error al llamar al método del servidor: " + error);
+        });
+    }
+
+
+    connection.on('cargoGrafico', function (ventasXCategoria) {
+
+        // Llama a la función para generar el gráfico con los datos recibidos
+        generarGrafico(ventasXCategoria);
+    });
+
+
+
+    connection.on('agregoVenta', function (ventasXCategoria) {
+
+        // Llama a la función para generar el gráfico con los datos recibidos
+        ventasXCategoria.forEach(item => {
+            
+            addData(myChartGeneral, item.categoria, item.totalVentas)
+        });
+    });
+
+
+    function accionarEvento(buttonId) {
+
+        connection.invoke("AgregarVentas", buttonId).then(function () { })
+
+    }
+
+
+
+    function addData(myChartGeneral, label, newData) {
+
+        // Buscar el índice del label en los datos existentes
+        const index = myChartGeneral.data.labels.indexOf(label);
+
+        const dataset = myChartGeneral.data.datasets[0];
+
+        if (index === -1) 
+        {
+            // Si el label no existe, agregarlo como nueva etiqueta y dato
+            myChartGeneral.data.labels.push(label);
+            dataset.data.push(newData);
+        } 
+        else 
+        {
+            // Si el label existe, actualizar el dato correspondiente
+            dataset.data[index] += newData; // Sumar el nuevo dato al dato existente
+        }
+
+        // Actualizar el gráfico
+        myChartGeneral.update();
+    }
+
+
+
+</script>

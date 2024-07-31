@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uvv1RnIX5s92wSEht8oIp5a5i4KjBlMO5Bg7cNA6nKIFczOJGQNcn1Ywg2V0dLXxq9eBBauHDjxOk1lV+a3oBA==",
+  "success": true,
+  "projectFilePath": "E:\\Proyecto Dashboard\\Dashboard Proyect\\Dashboard Proyect\\Dashboard Proyect.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ctilbe\\.nuget\\packages\\chart.js\\3.7.1\\chart.js.3.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,257 @@
+﻿@model IEnumerable<Dashboard_Proyect.Models.Venta>
+
+
+@{
+    ViewBag.Title = "Ventas";
+
+    List<Venta> listaVentas = Model.ToList();
+
+    // Ventas por mes ======================================================================
+    var ventasPorMes = listaVentas
+           .GroupBy(v => v.Fecha.Month)
+           .Select(g => new {
+               Mes = g.Key,
+               TotalVentas = g.Sum(v => v.Monto) })
+           .OrderBy(x => x.Mes)
+           .ToList();
+
+    // Ventas por categoria ======================================================================
+    var ventasPorCategoria = listaVentas
+         .GroupBy(v => v.CategoriaProducto)
+         .Select(g => new
+         {
+             Categoria = g.Key,
+             TotalVentas = g.Sum(v => v.Monto)
+         })
+         .OrderBy(x => x.Categoria)
+         .ToList();
+
+    // Total monto ventas ======================================================================
+    int totalMontoVentas = listaVentas.Sum(v => v.Monto);
+
+
+    // Calcular el total de ingresos por región ================================================
+    var ingresosPorRegion = listaVentas
+        .GroupBy(v => v.Region)
+        .Select(g => new
+        {
+            Region = g.Key,
+            TotalIngresos = g.Sum(v => v.Monto)
+        })
+        .ToList();
+
+    // Determinar la región con más ingresos
+    var regionConMasIngresos = ingresosPorRegion
+        .OrderByDescending(r => r.TotalIngresos)
+        .FirstOrDefault();
+
+    string regionConMasIngresosNombre = regionConMasIngresos?.Region ?? "N/A";
+    int totalIngresosRegionConMasIngresos = regionConMasIngresos?.TotalIngresos ?? 0;
+
+
+    // Calcular el total de ingresos por categoria ===============================================
+    var ingresosPorCategoria = listaVentas
+        .GroupBy(v => v.CategoriaProducto)
+        .Select(g => new
+        {
+            Categoria = g.Key,
+            TotalIngresos = g.Sum(v => v.Monto)
+        })
+        .ToList();
+
+    // Determinar la categoria con más ingresos
+    var categoriaConMasIngresos = ingresosPorCategoria
+        .OrderByDescending(r => r.TotalIngresos)
+        .FirstOrDefault();
+
+    string categoriaConMasIngresosNombre = categoriaConMasIngresos?.Categoria ?? "N/A";
+    int totalIngresosCategoriaConMasIngresos = categoriaConMasIngresos?.TotalIngresos ?? 0;
+
+
+    string hola = "hola";
+}
+
+<div class="row mb-2 bg-agregado-Oscuro2">
+
+    <div class="col-3 border-agregado-Oscuro">
+        <div class="row">
+            <div class="col-8">
+                <div class="p-2">
+                    <h5 class="text-danger">Ventas totales</h5>
+                    <h6>@listaVentas.Count</h6>
+                </div>
+            </div>
+
+            <div class="col-4 d-flex align-items-center justify-content-center p-0">
+                <img src="@Url.Content("~/assets/carrito.png")" width="50" height="50">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3 border-agregado-Oscuro">
+        <div class="row">
+            <div class="col-8">
+                <div class="p-2">
+                    <h5 class="text-danger">Ingresos total</h5>
+                    <h6>$ @totalMontoVentas</h6>
+                </div>
+            </div>
+
+            <div class="col-4 d-flex align-items-center justify-content-center p-0">
+                <img src="@Url.Content("~/assets/dinero.png")" width="50" height="50">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3 border-agregado-Oscuro">
+        <div class="row">
+            <div class="col-8">
+                <div class="p-2">
+                    <h5 class="text-danger">Region top</h5>
+                    <h6>@regionConMasIngresosNombre $ @totalIngresosRegionConMasIngresos</h6>
+                </div>
+            </div>
+
+            <div class="col-4 d-flex align-items-center justify-content-center p-0">
+                <img src="@Url.Content("~/assets/region.png")" width="50" height="50">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3 border-agregado-Oscuro">
+        <div class="row">
+            <div class="col-8">
+                <div class="p-2">
+                    <h5 class="text-danger">Categoria top</h5>
+                    <h6>@categoriaConMasIngresosNombre $ @totalIngresosCategoriaConMasIngresos</h6>
+                </div>
+            </div>
+
+            <div class="col-4 d-flex align-items-center justify-content-center p-0">
+                <img src="@Url.Content("~/assets/categoria.png")" width="50" height="50">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row bg-agregado-Oscuro2">
+
+    <div class="col-8 border-agregado-Oscuro">
+
+        <div class="">
+        @* <p class="fw-bold pt-2 ps-2">Ventas por mes</p> *@
+
+            <div class="p-2">
+                <canvas id="myChart1"></canvas>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="col-4 border-agregado-Oscuro">
+
+        <div class="p-1">
+        @* <p class="fw-bold pt-2 ps-2">Ventas por categoria</p> *@
+
+            <div class="p-2">
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+    // Ventas por mes ======================================================================
+    var ctxGeneral = document.getElementById('myChart1').getContext('2d');
+
+    var myChartGeneral = new Chart(ctxGeneral, {
+        type: 'bar',
+        data: {
+            labels: @Html.Raw(Json.Serialize(ventasPorMes.Select(x => x.Mes))),
+            datasets: [{
+                data: @Html.Raw(Json.Serialize(ventasPorMes.Select(x => x.TotalVentas))),
+
+                backgroundColor: [
+                    'rgba(102, 207, 122, 1)' //Green
+          
+                ],
+                borderColor: 'rgba(255, 255, 255, 1)',
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: false,
+                },
+                title: {
+                    display: true,
+                    text: 'Ventas por mes'
+                }
+            }
+        }
+    });
+
+
+    // Ventas por categoria ======================================================================
+    var ctxGeneral = document.getElementById('myChart2').getContext('2d');
+
+    var myChartGeneral = new Chart(ctxGeneral, {
+        type: 'doughnut',
+        data: {
+            labels: @Html.Raw(Json.Serialize(ventasPorCategoria.Select(x => x.Categoria))),
+            datasets: [{
+                data: @Html.Raw(Json.Serialize(ventasPorCategoria.Select(x => x.TotalVentas))),
+
+                backgroundColor: [
+                    'rgba(255, 159, 64, 1)', //Naranja
+                    'rgba(75, 192, 192, 1)', //Verde agua
+                    'rgba(54, 162, 235, 1)', //Azul
+                    'rgba(255, 99, 132, 1)' //Rojo
+
+                ],
+                borderColor: 'rgba(255, 255, 255, 1)',
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+                title: {
+                    display: true,
+                    text: 'Ventas por categoria'
+                }
+            }
+        }
+    });
+
+
+</script>
+
+
+
+@*     'rgba(102, 207, 122, 1)', //Green
+    'rgba(255, 113, 127, 1)', //Rojo
+    'rgba(228, 202, 44, 1)', //Amarillo
+    'rgba(253, 126, 20, 1)', //Naranja
+    'rgba(20, 253, 253, 1)', //Celeste
+    'rgba(105, 20, 253, 1)', //Violeta
+    'rgba(0, 92, 40, 1)', //Verde oscuro
+    'rgba(185, 185, 185, 1)', //Gris
+    'rgba(0, 41, 168, 1)', //Azul
+    'rgba(158, 0, 0, 1)', //Bordo
+    'rgba(230, 50, 255, 1)', //Rosado
+    'rgba(97, 160, 252, 1)' //Azul *@
+
