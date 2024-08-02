@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|c:\\users\\ctilbe\\desktop\\dashboard.proyect\\dashboard proyect\\views\\home\\dashboardventasdinamico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|solutionrelative:dashboard proyect\\views\\home\\dashboardventasdinamico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|c:\\users\\ctilbe\\desktop\\dashboard.proyect\\dashboard proyect\\views\\home\\dashboardventasrt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|solutionrelative:dashboard proyect\\views\\home\\dashboardventasrt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|c:\\users\\ctilbe\\desktop\\dashboard.proyect\\dashboard proyect\\views\\home\\dashboardventas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|solutionrelative:dashboard proyect\\views\\home\\dashboardventas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|c:\\users\\ctilbe\\desktop\\dashboard.proyect\\dashboard proyect\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|solutionrelative:dashboard proyect\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|c:\\users\\ctilbe\\desktop\\dashboard.proyect\\dashboard proyect\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|solutionrelative:dashboard proyect\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|c:\\users\\ctilbe\\desktop\\dashboard.proyect\\dashboard proyect\\hubs\\dashboardhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A46374F2-BE99-4CB3-93AB-8900E500AAF3}|Dashboard Proyect\\Dashboard Proyect.csproj|solutionrelative:dashboard proyect\\hubs\\dashboardhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardVentasDinamico.cshtml",
+              "DocumentMoniker": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Views\\Home\\DashboardVentasDinamico.cshtml",
+              "RelativeDocumentMoniker": "Dashboard Proyect\\Views\\Home\\DashboardVentasDinamico.cshtml",
+              "ToolTip": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Views\\Home\\DashboardVentasDinamico.cshtml",
+              "RelativeToolTip": "Dashboard Proyect\\Views\\Home\\DashboardVentasDinamico.cshtml",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAQwFEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-02T21:00:10.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Models\\Venta.cs",
+              "RelativeDocumentMoniker": "Dashboard Proyect\\Models\\Venta.cs",
+              "ToolTip": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Models\\Venta.cs",
+              "RelativeToolTip": "Dashboard Proyect\\Models\\Venta.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T21:02:25.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DashboardVentas.cshtml",
+              "DocumentMoniker": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Views\\Home\\DashboardVentas.cshtml",
+              "RelativeDocumentMoniker": "Dashboard Proyect\\Views\\Home\\DashboardVentas.cshtml",
+              "ToolTip": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Views\\Home\\DashboardVentas.cshtml",
+              "RelativeToolTip": "Dashboard Proyect\\Views\\Home\\DashboardVentas.cshtml",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAAAIcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-02T19:44:06.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardVentasRT.cshtml",
+              "DocumentMoniker": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Views\\Home\\DashboardVentasRT.cshtml",
+              "RelativeDocumentMoniker": "Dashboard Proyect\\Views\\Home\\DashboardVentasRT.cshtml",
+              "ToolTip": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Views\\Home\\DashboardVentasRT.cshtml",
+              "RelativeToolTip": "Dashboard Proyect\\Views\\Home\\DashboardVentasRT.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-31T17:12:07.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DashboardHub.cs",
+              "DocumentMoniker": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Hubs\\DashboardHub.cs",
+              "RelativeDocumentMoniker": "Dashboard Proyect\\Hubs\\DashboardHub.cs",
+              "ToolTip": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Hubs\\DashboardHub.cs",
+              "RelativeToolTip": "Dashboard Proyect\\Hubs\\DashboardHub.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAAwHwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T17:11:47.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Dashboard Proyect\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Dashboard Proyect\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAkwDYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T17:11:42.803Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

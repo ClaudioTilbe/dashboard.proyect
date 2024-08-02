@@ -67,8 +67,6 @@
     string categoriaConMasIngresosNombre = categoriaConMasIngresos?.Categoria ?? "N/A";
     int totalIngresosCategoriaConMasIngresos = categoriaConMasIngresos?.TotalIngresos ?? 0;
 
-
-    string hola = "hola";
 }
 
 <div class="row mb-2 bg-agregado-Oscuro2">
@@ -190,13 +188,33 @@
             maintainAspectRatio: true,
             plugins: {
                 legend: {
-                    display: false,
+                    display: false
                 },
                 title: {
                     display: true,
-                    text: 'Ventas por mes'
+                    text: 'Ventas por mes',
+                    color: 'white', // Cambia el color del texto del título a blanco
+                    font: {
+                        size: 20 // Cambia el tamaño del texto del título
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: 'white' // Cambia el color de los números del eje X a blanco
+                    }
+                },
+                y: {
+                    ticks: {
+                        color: 'white' // Cambia el color de los números del eje Y a blanco
+                    }
                 }
             }
+
+
+
+
         }
     });
 
@@ -228,10 +246,17 @@
             plugins: {
                 legend: {
                     position: 'bottom',
+                    labels: {
+                        color: 'white' // Cambia el color del texto de la leyenda a blanco
+                    }
                 },
                 title: {
                     display: true,
-                    text: 'Ventas por categoria'
+                    text: 'Ventas por categoria',
+                    color: 'white', // Cambia el color del texto del título a blanco
+                    font: {
+                        size: 20 // Cambia el tamaño del texto del título
+                    }
                 }
             }
         }

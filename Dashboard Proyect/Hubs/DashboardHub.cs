@@ -107,8 +107,27 @@ namespace Dashboard_Proyect.Hubs
                                     .OrderBy(x => x.Categoria)
                                     .ToList();
 
-            Hub.Clients.All.SendAsync("agregoVenta", ventasXCategoria);
+            Hub.Clients.All.SendAsync("agregoVentas", ventasXCategoria);
         }
+
+
+
+        public void ObtengoVentasXLabel(string label)
+        {
+            List<Venta> listaVentas = new List<Venta>();
+
+            listaVentas = datosCompartidos.ObtenerVentas("ListaVentas");
+
+            List<Venta> ventasXLabel = listaVentas.Where(v => v.CategoriaProducto == label).ToList();
+
+
+
+            Hub.Clients.All.SendAsync("EnvioVentasXLabel", ventasXLabel);
+        }
+
+
+
+
 
 
         /* Este Timer actualizaba el grafico cada un intervalo de tiempo, pero debido a que no era tan visualmente

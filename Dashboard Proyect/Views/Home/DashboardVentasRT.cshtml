@@ -9,18 +9,24 @@
 
 <div class="row bg-agregado-Oscuro2">
 
-    <div class="col-6 border-agregado-Oscuro">
+    <div class="col-12 col-lg-6  border-agregado-Oscuro">
 
-        <div class="p-1">
+        <div class="p-1 d-flex justify-content-center">
             @* <p class="fw-bold pt-2 ps-2">Ventas por categoria</p> *@
 
-            <div class="p-2">
+        @*     <div class="p-2">
+                <canvas id="myChart1"></canvas>
+            </div> *@
+
+            <div class="chart-container w-75 h-75">
                 <canvas id="myChart1"></canvas>
             </div>
+
+
         </div>
     </div>
 
-    <div class="col-6 border-agregado-Oscuro">
+    <div class="col-12 col-lg-6 border-agregado-Oscuro">
 
         <div class="p-3">
 
@@ -38,16 +44,35 @@
 </div>
 
 
+<div class="row bg-agregado-Oscuro2">
+
+    <div class="col-12 border-agregado-Oscuro">
+
+        <div class="p-3">
+
+            <h4 class="mb-3">Ventas de label seleccionado</h4>
+
+            <div id="infoVentas"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 
 
 <script>
 
     var myChartGeneral;
+    var ctxGeneral = document.getElementById('myChart1').getContext('2d');
 
     // Ventas por categoria ======================================================================
 
     function generarGrafico(ventasXCategoria) {
-        var ctxGeneral = document.getElementById('myChart1').getContext('2d');
+
+        //var ctxGeneral = document.getElementById('myChart1').getContext('2d');
 
         myChartGeneral = new Chart(ctxGeneral, {
             type: 'doughnut',
@@ -69,22 +94,55 @@
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: true,
+                maintainAspectRatio: false,
                 // animation: {
                 //     duration: 0 // Desactiva la animación
                 // },
                 plugins: {
                     legend: {
                         position: 'bottom',
+                        labels: {
+                            color: 'white' // Cambia el color del texto de la leyenda a blanco
+                        }
                     },
                     title: {
                         display: true,
-                        text: 'Ventas por categoria'
+                        text: 'Ventas por categoria',
+                        color: 'white', // Cambia el color del texto del título a blanco
+                        font: {
+                            size: 20 // Cambia el tamaño del texto del título
+                        }
                     }
                 }
             }
         });
     }
+
+
+
+    function formatVenta(venta) {
+
+        // Formatear la fecha al formato deseado
+        var fecha = new Date(venta.fecha);
+
+        var dia = ('0' + fecha.getDate()).slice(-2);
+        var mes = ('0' + (fecha.getMonth() + 1)).slice(-2);
+        var año = fecha.getFullYear();
+        var hora = ('0' + fecha.getHours()).slice(-2);
+        var minutos = ('0' + fecha.getMinutes()).slice(-2);
+
+        var fechaFormateada = dia + '-' + mes + '-' + año + ' - ' + hora + ':' + minutos;
+
+
+        return $.extend(venta, {
+            Fecha: fechaFormateada,
+            Monto: venta.monto.toString(),
+            Categoria: venta.categoriaProducto,
+            Region: venta.region,
+            Producto: venta.nombreProducto
+        });
+    }
+
 
 
 
@@ -101,6 +159,8 @@
         });
 
 
+
+
     function inicioRT() {
 
         connection.invoke("inicioRT").then(function () {
@@ -108,6 +168,7 @@
             console.error("(inicioRT) Error al llamar al método del servidor: " + error);
         });
     }
+
 
 
     connection.on('cargoGrafico', function (ventasXCategoria) {
@@ -118,7 +179,7 @@
 
 
 
-    connection.on('agregoVenta', function (ventasXCategoria) {
+    connection.on('agregoVentas', function (ventasXCategoria) {
 
         // Llama a la función para generar el gráfico con los datos recibidos
         ventasXCategoria.forEach(item => {
@@ -128,10 +189,37 @@
     });
 
 
+
+    connection.on('EnvioVentasXLabel', function (ventasXLabel) {
+
+
+        // Limpiar el contenido anterior del contenedor infoVentas
+        var infoVentasContainer = document.getElementById('infoVentas');
+        infoVentasContainer.innerHTML = '';
+
+        // Llama a la función para generar el gráfico con los datos recibidos
+        ventasXLabel.forEach(item => {
+
+            //debugger;
+
+            var venta = formatVenta(item)
+
+            var ventaInfo = document.createElement('p');
+            ventaInfo.classList.add('mb-1');
+
+            ventaInfo.innerText = `Fecha: ${venta.Fecha}, Monto: ${venta.Monto}, Categoria: ${venta.Categoria}, Region: ${venta.Region}, Producto: ${venta.Producto}`;
+            infoVentasContainer.appendChild(ventaInfo);
+            
+            
+            //================================================
+        });
+    });
+
+
+
     function accionarEvento(buttonId) {
 
-        connection.invoke("AgregarVentas", buttonId).then(function () { })
-
+        connection.invoke("AgregarVentas", buttonId);
     }
 
 
@@ -159,6 +247,26 @@
         myChartGeneral.update();
     }
 
+
+
+
+    // Agregar el evento onclick al canvas
+    document.getElementById('myChart1').onclick = function (evt) {
+        var points = myChartGeneral.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+
+        if (points.length) {
+            var firstPoint = points[0];
+            var label = myChartGeneral.data.labels[firstPoint.index];
+
+            connection.invoke("ObtengoVentasXLabel", label);
+        }
+    };
+
+
+
+    
+
+ 
 
 
 </script>

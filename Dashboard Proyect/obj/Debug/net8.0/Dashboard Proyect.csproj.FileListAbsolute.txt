@@ -29,3 +29,35 @@ E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashb
 E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.genruntimeconfig.cache
 E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\obj\Debug\net8.0\ref\Dashboard Proyect.dll
 E:\Proyecto Dashboard\Dashboard Proyect\Dashboard Proyect\bin\Debug\net8.0\libman.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\bin\Debug\net8.0\appsettings.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\bin\Debug\net8.0\libman.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.staticwebassets.runtime.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.exe
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.deps.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.runtimeconfig.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.dll
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\bin\Debug\net8.0\Dashboard Proyect.pdb
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.AssemblyInfoInputs.cache
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.AssemblyInfo.cs
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.csproj.CoreCompileInputs.cache
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.RazorAssemblyInfo.cache
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.RazorAssemblyInfo.cs
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.sourcelink.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets\msbuild.Dashboard Proyect.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets\msbuild.build.Dashboard Proyect.props
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Dashboard Proyect.props
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Dashboard Proyect.props
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\scopedcss\bundle\Dashboard Proyect.styles.css
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\scopedcss\projectbundle\Dashboard Proyect.bundle.scp.css
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.dll
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\refint\Dashboard Proyect.dll
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.pdb
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\Dashboard Proyect.genruntimeconfig.cache
+C:\Users\ctilbe\Desktop\dashboard.proyect\Dashboard Proyect\obj\Debug\net8.0\ref\Dashboard Proyect.dll

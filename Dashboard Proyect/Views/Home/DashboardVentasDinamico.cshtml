@@ -1,0 +1,131 @@
+﻿@model IEnumerable<Dashboard_Proyect.Models.Venta>
+
+@{
+    ViewBag.Title = "Ventas dinamico";
+
+
+    List<Venta> listaVentas = Model.ToList();
+
+    // var ventasPorCategoria = listaVentas
+    //        .GroupBy(v => v.CategoriaProducto)
+    //        .Select(grupo => grupo.ToList())
+    //        .ToList();
+
+    // var ventasPorCategoriaAgrupadas = ventasPorCategoria
+    //  .Select(categoria => categoria
+    //      .GroupBy(v => v.Region)
+    //      .Select(g => new
+    //      {
+    //          Region = g.Key,
+    //          Monto = g.Sum(v => v.Monto)
+    //      })
+    //      .ToList()
+    //  )
+    //  .ToList();
+
+
+    // Agrupar las ventas por CategoriaProducto y luego por Region
+    var ventasPorCategoria = listaVentas
+        .GroupBy(v => v.CategoriaProducto)
+        .Select(grupo => new
+        {
+            Categoria = grupo.Key,
+            Datos = grupo
+                .GroupBy(v => v.Region)
+                .Select(regionGrupo => new
+                {
+                    Region = regionGrupo.Key,
+                    TotalMonto = regionGrupo.Sum(v => v.Monto)
+                })
+                .ToList()
+        })
+        .ToList();
+
+    string hola = "";
+}
+
+
+
+
+
+@*NUEVO CODIGO ==============================================================================================*@
+@if (listaVentas == null || listaVentas.Count <= 0)
+{
+    <p class="ml-4 text-muted">No existen registros para generar los Dashboard.</p>
+}
+else
+{
+    @*DASHBOARD LISTADO ==============================================================================================*@
+
+    @for (int i = 0; i < ventasPorCategoria.Count; i++)
+    {
+        var categoriaActual = ventasPorCategoria[i].Categoria;
+        var labels = ventasPorCategoria[i].Datos.Select(x => x.Region).ToList();
+        var data = ventasPorCategoria[i].Datos.Select(x => x.TotalMonto).ToList();
+
+
+        <div class="row mb-3 bg-agregado-Oscuro2">
+
+            <div class="col-8 border-agregado-Oscuro">
+
+                <div class="p-1 d-flex justify-content-center">
+
+                    <div class="chart-container w-75 h-75">
+                        <canvas id="chartDinamico_@i" class=""></canvas>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-4 border-agregado-Oscuro p-3">
+                <h4>Categoria @categoriaActual</h4>
+            </div>
+
+        </div>
+
+
+
+
+        <script>
+            var ctx_@i = document.getElementById('chartDinamico_@i').getContext('2d');
+
+            var myChart_@i = new Chart(ctx_@i, {
+                type: 'bar',
+                data: {
+                    labels: @Html.Raw(Json.Serialize(labels)),
+                    datasets: [{
+                        data: @Html.Raw(Json.Serialize(data)),
+
+                        backgroundColor: [
+
+                            'rgba(102, 207, 122, 1)',
+                            'rgba(255, 113, 127, 1)',
+                            'rgba(228, 202, 44, 1)',
+                            'rgba(100, 100, 44, 1)'
+                        ],
+
+                        borderColor: [
+                            'rgba(255, 255, 255, 1)'
+                        ],
+
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        </script>
+    }
+
+
+
+}
+

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Proyecto Dashboard\\Dashboard Proyect\\Dashboard Proyect\\Dashboard Proyect.csproj": {}
+    "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Dashboard Proyect.csproj": {}
   },
   "projects": {
-    "E:\\Proyecto Dashboard\\Dashboard Proyect\\Dashboard Proyect\\Dashboard Proyect.csproj": {
+    "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Dashboard Proyect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Proyecto Dashboard\\Dashboard Proyect\\Dashboard Proyect\\Dashboard Proyect.csproj",
+        "projectUniqueName": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Dashboard Proyect.csproj",
         "projectName": "Dashboard Proyect",
-        "projectPath": "E:\\Proyecto Dashboard\\Dashboard Proyect\\Dashboard Proyect\\Dashboard Proyect.csproj",
+        "projectPath": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\Dashboard Proyect.csproj",
         "packagesPath": "C:\\Users\\ctilbe\\.nuget\\packages\\",
-        "outputPath": "E:\\Proyecto Dashboard\\Dashboard Proyect\\Dashboard Proyect\\obj\\",
+        "outputPath": "C:\\Users\\ctilbe\\Desktop\\dashboard.proyect\\Dashboard Proyect\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ctilbe\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -43,10 +43,17 @@ namespace Dashboard_Proyect.Controllers
 
         public IActionResult DashboardVentasRT()
         {
-
             return View();
         }
 
+        public IActionResult DashboardVentasDinamico()
+        {
+            List<Venta> listaVentas = new List<Venta>();
+            listaVentas = Venta.GenerarDatosDePrueba(100);
+
+
+            return View(listaVentas);
+        }
 
 
 
