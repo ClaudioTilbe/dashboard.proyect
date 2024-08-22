@@ -23,19 +23,19 @@ Por otra parte, también necesitaba una forma de generar un listado de estos dat
 
 # :link: Funciones
 
-## Ventas
+### Ventas
 En esta página opte por utilizar distintos tipos de gráficos y fórmulas para exponer datos útiles a la temática en la que se basa el proyecto. Si bien son gráficos típicos, fueron útiles para ir aprendiendo sobre el manejo de las distintas configuraciones que se le pueden dar en cada caso.
 
 
-## Ventas dinamico
+### Ventas dinamico
 La idea de esta página fue codificar un algoritmo que me permitiese generar un gráfico por cada categoría de manera dinámica. Es decir, que sin hacer modificaciones este pudiese igualmente generar un gráfico por cada categoría que se agregue, o reciprocamente no generar un gráfico si ya no hay ventas de una determinada categoría.
 
 
-## Ventas RT
+### Ventas RT
 Esta función tenía la finalidad de utilizar en la codificación de una misma solución SignalR y Chart.js. Efectivamente, pude hacerlo y agregué también un método que permite la inserción de data al gráfico que puede ver, en tiempo real, cada usuario conectado al hub. Esta es una función en la que me gustaría seguir trabajando en un futuro, ya que tengo pendiente lo que sería remover data del gráfico.
 
 
-## Ventas Server
+### Ventas Server
 Entre los dashboard que quería codificar, también tenía previsto configurar uno que avanze en tiempo real, presentando los valores segundo a segundo, pero al momento de revisar la documentación de Chart.js note que había un vacío en este tipo de gráfico precisamente, e investigando, terminé dando con **chartjs plugin streaming**, justamente una extensión que permite trabajar con este tipo de gráficos.
 Intentando mantener la temática, pero al mismo tiempo buscando un contexto en el que sea útil este tipo de gráficos por segundo, opte por codificar una función que permita el "Monitoreo de CPU" del servidor, claramente con datos de prueba.
 
