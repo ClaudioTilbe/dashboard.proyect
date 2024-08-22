@@ -32,6 +32,9 @@ Por otra parte, también necesitaba una forma de generar un listado de estos dat
 ### Ventas
 En esta página opte por utilizar distintos tipos de gráficos y fórmulas para exponer datos útiles a la temática en la que se basa el proyecto. Si bien son gráficos típicos, fueron útiles para ir aprendiendo sobre el manejo de las distintas configuraciones que se le pueden dar en cada caso.
 
+![](https://github.com/ClaudioTilbe/dashboard.proyect/blob/52b6d3676c55b5513a9c2b1c3ecb851dedca17ca/assets/Gif/Ventas.gif)
+
+
 
 ### Ventas dinamico
 La idea de esta página fue codificar un algoritmo que me permitiese generar un gráfico por cada categoría de manera dinámica. Es decir, que sin hacer modificaciones este pudiese igualmente generar un gráfico por cada categoría que se agregue, o reciprocamente no generar un gráfico si ya no hay ventas de una determinada categoría.
