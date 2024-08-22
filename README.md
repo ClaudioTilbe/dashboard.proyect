@@ -8,11 +8,11 @@ Durante el desarrollo de OFA, mi proyecto anterior, pude utilizar Chart.js pero 
 
 Para este proyecto, genere una **aplicación web de ASP.NET Core** con **.NET 8** y con un patrón de arquitectura **MVC**.
 
-- Chart.js (3.9.1): Graficación de los datos
+- **Chart.js (3.9.1):** Graficación de los datos
 
-- Chartjs plugin streaming: Extension de chart.js; se encarga del manejo del gráfico en tiempo real
+- **Chartjs plugin streaming:** Extension de chart.js; se encarga del manejo del gráfico en tiempo real
 
-- SignalR: Manejo de datos entre cliente-servidor en tiempo real
+- **SignalR:** Manejo de datos entre cliente-servidor en tiempo real
 
 > [!IMPORTANT]
 > Se utiliza la versión 3.9.1 de chart.js debido a que necesitaba compatibilidad con su plugin. 
