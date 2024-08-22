@@ -39,15 +39,22 @@ En esta página opte por utilizar distintos tipos de gráficos y fórmulas para 
 ### Ventas dinamico
 La idea de esta página fue codificar un algoritmo que me permitiese generar un gráfico por cada categoría de manera dinámica. Es decir, que sin hacer modificaciones este pudiese igualmente generar un gráfico por cada categoría que se agregue, o reciprocamente no generar un gráfico si ya no hay ventas de una determinada categoría.
 
+![](https://github.com/ClaudioTilbe/dashboard.proyect/blob/7dea6162c330f88d9156f344f62277056d0310e8/assets/Gif/Ventas%20dinamico.gif)
+
+
 
 ### Ventas RT
 Esta función tenía la finalidad de utilizar en la codificación de una misma solución SignalR y Chart.js. Efectivamente, pude hacerlo y agregué también un método que permite la inserción de data al gráfico que puede ver, en tiempo real, cada usuario conectado al hub. Esta es una función en la que me gustaría seguir trabajando en un futuro, ya que tengo pendiente lo que sería remover data del gráfico.
+
+![](https://github.com/ClaudioTilbe/dashboard.proyect/blob/7dea6162c330f88d9156f344f62277056d0310e8/assets/Gif/Ventas%20RT.gif)
+
 
 
 ### Ventas Server
 Entre los dashboard que quería codificar, también tenía previsto configurar uno que avanze en tiempo real, presentando los valores segundo a segundo, pero al momento de revisar la documentación de Chart.js note que había un vacío en este tipo de gráfico precisamente, e investigando, terminé dando con **chartjs plugin streaming**, justamente una extensión que permite trabajar con este tipo de gráficos.
 Intentando mantener la temática, pero al mismo tiempo buscando un contexto en el que sea útil este tipo de gráficos por segundo, opte por codificar una función que permita el "Monitoreo de CPU" del servidor, claramente con datos de prueba.
 
+![](https://github.com/ClaudioTilbe/dashboard.proyect/blob/7dea6162c330f88d9156f344f62277056d0310e8/assets/Gif/Ventas%20server.gif)
 
 
 
