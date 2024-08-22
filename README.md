@@ -2,6 +2,8 @@
 
 Durante el desarrollo de OFA, mi proyecto anterior, pude utilizar Chart.js pero sin poder explotar demaciado sus cualidades, dado que el contexto y las entidades que utilizaba no favorecían la confección de los dashboard que me hubiese gustado exponer en la aplicación web. Teniendo esto en cuenta y una vez terminado OFA, me aboqué en el desarrollo de un pequeño proyecto que me permitiese, ahora sí, utilizar las características que esta biblioteca me ofrecía, por lo que finalmente inicié el desarrollo de **dashboard.proyect**. 
 
+<br>
+
 # :link: Tecnologias
 
 Para este proyecto, genere una **aplicación web de ASP.NET Core** con **.NET 8** y con un patrón de arquitectura **MVC**.
@@ -12,7 +14,7 @@ Para este proyecto, genere una **aplicación web de ASP.NET Core** con **.NET 8*
 
 - SignalR: Manejo de datos entre cliente-servidor en tiempo real
 
-
+<br>
 
 # :link: Datos para pruebas
 
@@ -20,6 +22,7 @@ Para generar los dashboards, primero que nada iba a necesitar datos que sean ent
 
 Por otra parte, también necesitaba una forma de generar un listado de estos datos y que sean medianamente consistentes para hacer el proyecto un poco más realista. Para cumplir con esta finalidad elabore un pequeño algoritmo que genera la cantidad de datos de prueba que necesite, el cual está precisamente aquí, junto a la codificación de la entidad.
 
+<br>
 
 # :link: Funciones
 
