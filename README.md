@@ -14,7 +14,7 @@ Para este proyecto, genere una **aplicación web de ASP.NET Core** con **.NET 8*
 
 
 
- # :link: Datos para pruebas
+# :link: Datos para pruebas
 
 Para generar los dashboards, primero que nada iba a necesitar datos que sean entre sí consistentes y tuviesen una estructura o serie de características que favorecieran la confección de varios gráficos utilizando sus propiedades.
 
