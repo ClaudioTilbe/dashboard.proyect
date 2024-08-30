@@ -21,9 +21,45 @@ Para este proyecto, genere una **aplicación web de ASP.NET Core** con **.NET 8*
 
 # :link: Datos para pruebas
 
-Para generar los dashboards, primero que nada iba a necesitar datos que sean entre sí consistentes y tuviesen una estructura o serie de características que favorecieran la confección de varios gráficos utilizando sus propiedades.
+Para generar los dashboards, primero que nada iba a necesitar datos que sean entre sí consistentes y tuviesen una estructura o serie de características que favorecieran la confección de varios gráficos utilizando sus propiedades. Opte por crear la entidad "Ventas" para cumplir este rol. 
 
-Por otra parte, también necesitaba una forma de generar un listado de estos datos y que sean medianamente consistentes para hacer el proyecto un poco más realista. Para cumplir con esta finalidad elabore un pequeño algoritmo que genera la cantidad de datos de prueba que necesite, el cual está precisamente aquí, junto a la codificación de la entidad.
+Por otra parte, también necesitaba una forma de generar un listado de ventas y que estas sean medianamente consistentes para hacer el proyecto un poco más realista. Para cumplir con esta finalidad elabore un pequeño algoritmo que genera la cantidad de datos de prueba que necesite.
+
+      public static List<Venta> GenerarDatosDePrueba(int cantidad)
+              {
+                  var random = new Random();
+                  var ventas = new List<Venta>();
+      
+                  while (ventas.Count < cantidad)
+                  {
+      
+                      for (int i = 0; i < cantidad; i++)
+                      {
+                          //Obtengo numero entre 1 y 5
+                          int x = random.Next(1, 6);
+      
+                          var fecha = new DateTime(2024, random.Next(1, 13), random.Next(1, 29));
+                          var monto = random.Next(100, 9000);
+                          var categoriaProducto = Categorias[random.Next(Categorias.Length)];
+                          var region = Regiones[random.Next(Regiones.Length)];
+                          var nombreProducto = NombresProductos[random.Next(NombresProductos.Length)];
+      
+                          nombreProducto = nombreProducto + i.ToString();
+      
+                          for (int j = 0; j < x; j++)
+                          {
+                              //Mientras haya menos de la cantidad solicitada seguira agregando
+                              if (ventas.Count <= (cantidad - 1))
+                              {
+                                  ventas.Add(new Venta(fecha, monto, categoriaProducto, region, nombreProducto));
+                              }
+                          }
+                      }
+                  }
+      
+                  return ventas;
+              }
+
 
 <br>
 
